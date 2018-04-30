@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0px;
+    height:90%;
+} 
+ /* #header{
+    margin: 0px;
+    height:100%;
+} */
+
+#query-form{
+    height: 100vh;
+
+}
+@media screen and (max-width: 939px){
+    .parallax {
+    /* Set a specific height */
+    min-height: initial; 
+
+
+    
+}
+
+    #query-form{
+        margin-top: 5px;
+        padding-top: 5px;
+        max-height: 70%;
+    }
+}
+@media screen and (min-width: 940px){
+    #header_pic{
+        display: none;
+    }
+   .parallax {
+    background-image: url("../pics/collage-1.jpg");
+    /* Set a specific height */
+    min-height: 100vh; 
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+}
+#commingSoon{
+    padding-top: 50px;
+}
+.text-center{
+    text-align: center;
+}
+#submitted{
+    color: green;
+    font-style: bold;
+    margin-left: 5px;
+}

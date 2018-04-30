@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/libs/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./styles/custom.css">
+</head>
+<body>
+    <div id="header" class="parallax">
+        <img id="header_pic" class="img-fluid" src="./pics/collage-1.jpg">
+    </div>
+    <div id="query-form" class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- <div class="col-2"></div> -->
+            <div class="col-8">
+                <h5 id="commingSoon" class="text-center">Our website is coming soon!</h5>
+                <p class="text-center"> For more information on classes, admissions and more call us :- 8527114490 or Email;- info@jindalartinstitute.com</p>
+                <form id="ques-form">
+                    <div class="form-group">
+                        <input name="fName" id="inputName" class="form-control" type="text" placeholder="Enter name" required>
+                        
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <input name="phoneNumber" id="inputPhone" class="form-control" type="text" placeholder="Mobile number">
+                    </div>
+                    <div class="form-group">
+                        <button id="submit-form" class=" btn btn-primary ">Submit</button><label id="submitted"></label>
+                    </div>
+                    
+                </form>
+            </div>
+            <!-- <div class="col-2"></div> -->
+        </div>
+        
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./js/libs/jquery-3.3.1.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
