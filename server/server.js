@@ -10,15 +10,14 @@ const publicPath = path.join(__dirname, '../public');
 var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
-
+var env = process.env.NODE_ENV || 'development';
+if (env === 'development'){
+    process.env.MONGODB_URI = 'mongodb://localhost:27017/Request';
+}
 
 app.use(express.static(publicPath));
 io.on('connection',(socket)=>{
     socket.on('formSubmit',(req,callback)=>{
-        if(port===3000){
-            process.env.MONGODB_URI = 'mongodb://localhost:27017/Request';
-        }
-
         MongoClient.connect(process.env.MONGODB_URI,(err,client)=>{
             if(err){
                 console.log('Unable to connect to database.');
