@@ -13,7 +13,10 @@ var io = socketIO(server);
 var env = process.env.NODE_ENV || 'development';
 if (env === 'development'){
     process.env.MONGODB_URI = 'mongodb://localhost:27017/Request';
+}else{
+    process.env.MONGODB_URI ='mongodb://heroku_z7bwkfwf:1og0drus3ui844j8emeeq9b8am@ds163769.mlab.com:63769/heroku_z7bwkfwf';
 }
+
 
 app.use(express.static(publicPath));
 io.on('connection',(socket)=>{
